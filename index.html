@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbox</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- सोप्या रिअल-टाईम चॅटिंगसाठी MQTT लायब्ररी -->
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+</head>
+<body>
+
+  <div class="chat-app">
+    <!-- वरचा हेडर -->
+    <header class="chat-header">
+      <div class="logo">💬 Chatbox</div>
+      <input type="text" id="username" placeholder="तुमचे नाव..." maxlength="15">
+    </header>
+
+    <!-- मेसेज दिसण्याची जागा -->
+    <div id="messages" class="messages-container"></div>
+
+    <!-- मेसेज टाईप करण्याचा बॉक्स -->
+    <form id="chat-form" class="chat-input-area">
+      <input type="text" id="message-text" placeholder="मेसेज टाईप करा..." autocomplete="off" required>
+      <button type="submit">पाठवा</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
